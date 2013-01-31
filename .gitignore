@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 TestResults
 Pandell.sln.cache
+Pandell.v11.suo
 =======
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
@@ -110,4 +110,3 @@ Generated_Code #added for RIA/Silverlight projects
 _UpgradeReport_Files/
 Backup*/
 UpgradeLog*.XML
->>>>>>> c2e5a137e8b6b367c7b3600c9bb3998052508783
