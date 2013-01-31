@@ -1,0 +1,7 @@
+E:\Projects\Pandell\Pandell.Tests\bin\Release\Pandell.Tests.dll
+E:\Projects\Pandell\Pandell.Tests\bin\Release\Pandell.Tests.pdb
+E:\Projects\Pandell\Pandell.Tests\obj\Release\Pandell.Tests.dll
+E:\Projects\Pandell\Pandell.Tests\obj\Release\Pandell.Tests.pdb
+E:\Projects\Pandell\Pandell.Tests\bin\Release\Pandell.Randomizer.dll
+E:\Projects\Pandell\Pandell.Tests\bin\Release\Pandell.Randomizer.pdb
+E:\Projects\Pandell\Pandell.Tests\obj\Release\Pandell.Tests.csprojResolveAssemblyReference.cache
