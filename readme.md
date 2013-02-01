@@ -25,7 +25,7 @@ The method it's self was quite fun to come up with. Using a `List<int>` to store
 
 ####The Build:
 
-No project is complete without a nice build script to build the solution, run the tests and ouput the results. This build script has a couple of dependencies required to run on the local computer. The first is that the project requires .NET 4.0 to be installed. It was originally build with .NET 4.5, but after realizing that many shops are using v4.5 yet, I adjusted the properties to use v4.0. Second, with the thought that this project "might" be run on a computer that doesn't have Visual Studio installed, I included an open source project called [Gallio][1] in the `build_tools` directory. This project helps me run the tests without the need for `MSTest.exe` which ships with Visual Studio.
+No project is complete without a nice build script to build the solution, run the tests and ouput the results. This build script has a couple of dependencies required to run on the local computer. The first is that the project requires .NET 4.0 to be installed. It was originally built with .NET 4.5, but after realizing that many shops are using v4.5 yet, I adjusted the properties to use v4.0. Second, with the thought that this project "might" be run on a computer that doesn't have Visual Studio installed, I included an open source project called [Gallio][1] in the `build_tools` directory. This project helps me run the tests without the need for `MSTest.exe` which ships with Visual Studio.
 
 So fire up Powershell and run the `build.ps1` to see the builds compile, tests run, and output be generated. All in the hopes that it'll pass.
 
