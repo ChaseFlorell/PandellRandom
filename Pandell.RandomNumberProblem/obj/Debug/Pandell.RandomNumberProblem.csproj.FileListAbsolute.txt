@@ -1,8 +1,0 @@
-E:\Projects\Pandell\Pandell.RandomNumberProblem\bin\Debug\Pandell.RandomNumberProblem.exe.config
-E:\Projects\Pandell\Pandell.RandomNumberProblem\obj\Debug\Pandell.RandomNumberProblem.csprojResolveAssemblyReference.cache
-E:\Projects\Pandell\Pandell.RandomNumberProblem\bin\Debug\Pandell.RandomNumberProblem.exe
-E:\Projects\Pandell\Pandell.RandomNumberProblem\bin\Debug\Pandell.RandomNumberProblem.pdb
-E:\Projects\Pandell\Pandell.RandomNumberProblem\obj\Debug\Pandell.RandomNumberProblem.exe
-E:\Projects\Pandell\Pandell.RandomNumberProblem\obj\Debug\Pandell.RandomNumberProblem.pdb
-E:\Projects\Pandell\Pandell.RandomNumberProblem\bin\Debug\Pandell.Randomizer.dll
-E:\Projects\Pandell\Pandell.RandomNumberProblem\bin\Debug\Pandell.Randomizer.pdb
