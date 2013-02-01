@@ -1,6 +1,14 @@
 TestResults
 Pandell.sln.cache
 Pandell.v11.suo
+Pandell.RandomNumberProblem/bin
+Pandell.RandomNumberProblem/obj
+
+Pandell.Randomizer/bin
+Pandell.Randomizer/obj
+
+Pandell.Tests/bin
+Pandell.Tests/obj
 =======
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
