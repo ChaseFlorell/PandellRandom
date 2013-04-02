@@ -2,6 +2,7 @@
 # If the build computer is not running the appropriate version of .NET, then the build will not run. Throw an error immediately.
 if( (ls "$env:windir\Microsoft.NET\Framework\v4.0*") -eq $null ) {
 	throw "This Pandell project requires .NET 4.0 to compile. Unfortunatly .NET 4.0 doesn't appear to be installed on this machine."
+	##teamcity[buildStatus status='FAILURE' ]
 }
 
 
@@ -29,7 +30,10 @@ Remove-Item "$directorypath\Pandell.Tests\obj" -force -recurse -ErrorAction Sile
 cmd /c C:\Windows\Microsoft.NET\Framework\$v4_net_version\msbuild.exe "$directorypath\Pandell.sln" /p:Configuration=Release 
 
 # Break if the build throws an error.
-if(! $?) {throw "Fatal error, project build failed"}
+if(! $?) {
+	throw "Fatal error, project build failed"
+	##teamcity[buildStatus status='FAILURE' ]
+}
 
 
 ##teamcity[progressMessage 'Build Passed']
@@ -42,7 +46,10 @@ Write-Host "$nl project build passed."  -ForegroundColor Green
 cmd /c $directorypath\build_tools\gallio\gallio.echo.exe $directorypath\Pandell.Tests\bin\release\Pandell.Tests.dll
 
 # Break if the tests throw an error.
-if(! $?) {throw "Test run failed. This does not necessarily mean the tests failed."}
+if(! $?) {
+	throw "Test run failed. This does not necessarily mean the tests failed."
+	##teamcity[buildStatus status='FAILURE' ]	
+}
 
 
 ##teamcity[progressMessage 'Tests passed']
