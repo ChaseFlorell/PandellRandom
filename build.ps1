@@ -63,4 +63,4 @@ if(! $?) {throw "Fatal error, project did not run."}
 # Success!
 Write-Host "project ran successfully"  -ForegroundColor Green
 
-##teamcity[buildStatus status='0' ]
+##teamcity[buildStatus status='SUCCESS' ]
