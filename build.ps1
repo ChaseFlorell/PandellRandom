@@ -13,7 +13,7 @@ $directorypath = Split-Path $invocation.MyCommand.Path
 $v4_net_version = (ls "$env:windir\Microsoft.NET\Framework\v4.0*").Name
 $nl = [Environment]::NewLine
 
-Copy-Item -LiteralPath "$directorypath\packages\NUnit.2.6.2\lib\nunit.framework.dll" "$directorypath\Pandell.Tests\bin\debug" -Force
+Copy-Item -LiteralPath "$directorypath\packages\NUnit.2.6.2\lib\nunit.framework.dll" "$directorypath\Pandell.Tests\bin\debug" -Force -Recurse
 
 ##teamcity[progressMessage 'Using msbuild.exe to build the project']
 # Build the project using msbuild.exe.
