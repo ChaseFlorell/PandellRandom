@@ -23,6 +23,7 @@ Remove-Item "$directorypath\Pandell.RandomNumberProblem\obj" -force -recurse -Er
 Remove-Item "$directorypath\Pandell.Tests\bin" -force -recurse -ErrorAction SilentlyContinue
 Remove-Item "$directorypath\Pandell.Tests\obj" -force -recurse -ErrorAction SilentlyContinue
 
+Copy-Item -LiteralPath "$directorypath\packages\NUnit.2.6.2\lib\nunit.framework.dll" "$directorypath\Pandell.Tests\bin"
 
 ##teamcity[progressMessage 'Using msbuild.exe to build the project']
 # Build the project using msbuild.exe.
