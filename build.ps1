@@ -47,3 +47,4 @@ if(! $?) {
 }
 
 ##teamcity[progressMessage 'Tests passed']
+[Environment]::Exit(1)
