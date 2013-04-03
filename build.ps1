@@ -28,6 +28,7 @@ Remove-Item "$directorypath\Pandell.Tests\obj" -force -recurse -ErrorAction Sile
 # Build the project using msbuild.exe.
 # note, we've already determined that .NET is already installed on this computer.
 cmd /c C:\Windows\Microsoft.NET\Framework\$v4_net_version\msbuild.exe "$directorypath\Pandell.sln" /p:Configuration=Release 
+cmd /c C:\Windows\Microsoft.NET\Framework\$v4_net_version\msbuild.exe "$directorypath\Pandell.sln" /p:Configuration=Debug
 
 # Break if the build throws an error.
 if(! $?) {
@@ -43,7 +44,7 @@ Write-Host "$nl project build passed."  -ForegroundColor Green
 
 ##teamcity[progressMessage 'running tests']
 # Run the tests.
-cmd /c $directorypath\build_tools\gallio\gallio.echo.exe $directorypath\Pandell.Tests\bin\release\Pandell.Tests.dll
+cmd /c $directorypath\build_tools\nunit\nunit-console.exe $directorypath\Pandell.Tests\bin\debug\Pandell.Tests.dll
 
 # Break if the tests throw an error.
 if(! $?) {
