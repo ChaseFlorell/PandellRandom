@@ -13,16 +13,6 @@ $directorypath = Split-Path $invocation.MyCommand.Path
 $v4_net_version = (ls "$env:windir\Microsoft.NET\Framework\v4.0*").Name
 $nl = [Environment]::NewLine
 
-
-##teamcity[progressMessage 'cleaning out build directories']
-# Clean build dirs [bin], and [obj]
-Remove-Item "$directorypath\Pandell.Randomizer\bin" -force -recurse -ErrorAction SilentlyContinue
-Remove-Item "$directorypath\Pandell.Randomizer\obj" -force -recurse -ErrorAction SilentlyContinue
-Remove-Item "$directorypath\Pandell.RandomNumberProblem\bin" -force -recurse -ErrorAction SilentlyContinue
-Remove-Item "$directorypath\Pandell.RandomNumberProblem\obj" -force -recurse -ErrorAction SilentlyContinue
-Remove-Item "$directorypath\Pandell.Tests\bin" -force -recurse -ErrorAction SilentlyContinue
-Remove-Item "$directorypath\Pandell.Tests\obj" -force -recurse -ErrorAction SilentlyContinue
-
 Copy-Item -LiteralPath "$directorypath\packages\NUnit.2.6.2\lib\nunit.framework.dll" "$directorypath\Pandell.Tests\bin\debug" -Force
 
 ##teamcity[progressMessage 'Using msbuild.exe to build the project']
