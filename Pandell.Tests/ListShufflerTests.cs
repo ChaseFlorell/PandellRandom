@@ -32,7 +32,7 @@
             var listShuffler = new ListShuffler();
             var shuffledList = listShuffler.Shuffle();
             // By default, our shuffled list should return 10000 records.
-            Assert.IsTrue(shuffledList.Count == 10000);
+            Assert.IsTrue(shuffledList.Count == 10001);
         }
 
         [Test]
