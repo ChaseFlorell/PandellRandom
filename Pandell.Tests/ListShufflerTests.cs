@@ -1,13 +1,13 @@
 ﻿namespace Pandell.Tests {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using NUnit.Framework;
     using Pandell.Randomizer;
     using System;
     using System.Collections.Generic;
 
-    [TestClass]
+    [TestFixture]
     public class ListShufflerTests {
 
-        [TestMethod]
+        [Test]
         public void ShuffledListShouldBeWithinRange() {
             var listShuffler = new ListShuffler();
             var shuffledList = listShuffler.Shuffle();
@@ -27,7 +27,7 @@
             Assert.IsFalse(failed);
         }
 
-        [TestMethod]
+        [Test]
         public void ListShufflerReturnsTenThousandRecordsByDefault() {
             var listShuffler = new ListShuffler();
             var shuffledList = listShuffler.Shuffle();
@@ -35,7 +35,7 @@
             Assert.IsTrue(shuffledList.Count == 10000);
         }
 
-        [TestMethod]
+        [Test]
         public void ListShufflerReturnsRequestedNumberOfRecords() {
             // The task was to return 10000 unique numbers, but this test just
             // checks to confirm that the returned list has the requested number
@@ -57,7 +57,7 @@
         }
 
 
-        [TestMethod]
+        [Test]
         public void ShuffledListsAreTrulyRandom() {
             // note: this test "could" fail, but the odds are incredibly slim.
             var listShuffler = new ListShuffler();
@@ -97,7 +97,7 @@
 
         }
 
-        [TestMethod]
+        [Test]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void ListShufflerWasNotGivenValidList() {
             // NOTE: this number can be anything BUT 10000
