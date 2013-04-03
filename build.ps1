@@ -41,15 +41,8 @@ cmd /c $directorypath\build_tools\nunit\nunit-console.exe $directorypath\Pandell
 
 # Break if the tests throw an error.
 if(! $?) {
-	throw "Test run failed. This does not necessarily mean the tests failed."
+	throw "Test run failed."
 	##teamcity[buildStatus status='FAILURE' ]	
-	exit 1
 }
 
-
 ##teamcity[progressMessage 'Tests passed']
-# Good, the tests passed
-Write-Host "$nl project tests passed"  -ForegroundColor Green
-
-##teamcity[buildStatus status='SUCCESS' ]
-exit 0
