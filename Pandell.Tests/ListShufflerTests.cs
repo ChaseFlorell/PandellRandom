@@ -40,7 +40,7 @@
             // The task was to return 10000 unique numbers, but this test just
             // checks to confirm that the returned list has the requested number
             // of records. For the purpose of this test, I'm still using 10000
-            const int defaultListSize = 10001;
+            const int defaultListSize = 10000;
             var listShuffler = new ListShuffler();
             var sequentialList = new List<int>();
 
