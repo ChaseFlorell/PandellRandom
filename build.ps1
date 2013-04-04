@@ -1,8 +1,14 @@
+trap
+{
+    write-output $_
+    ##teamcity[buildStatus status='FAILURE' ]
+    exit 1
+}
+
 ##teamcity[progressMessage 'Beginning build']
 # If the build computer is not running the appropriate version of .NET, then the build will not run. Throw an error immediately.
 if( (ls "$env:windir\Microsoft.NET\Framework\v4.0*") -eq $null ) {
 	throw "This project requires .NET 4.0 to compile. Unfortunatly .NET 4.0 doesn't appear to be installed on this machine."
-	##teamcity[buildStatus status='FAILURE' ]
 }
 
 
@@ -25,7 +31,6 @@ cmd /c C:\Windows\Microsoft.NET\Framework\$v4_net_version\msbuild.exe "$director
 # Break if the build throws an error.
 if(! $?) {
 	throw "Fatal error, project build failed"
-	##teamcity[buildStatus status='FAILURE' ]
 }
 
 
@@ -41,7 +46,6 @@ cmd /c $directorypath\build_tools\nunit\nunit-console.exe $directorypath\Pandell
 # Break if the tests throw an error.
 if(! $?) {
 	throw "Test run failed."
-	##teamcity[buildStatus status='FAILURE' ]	
 }
-
 ##teamcity[progressMessage 'Tests passed']
+##teamcity[progressMessage 'Build complete']
